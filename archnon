@@ -182,7 +182,7 @@ myip(){
 if ss -tulpn | grep -iE "6969|9150|9151" >/dev/null 2>&1 || pgrep -a tor | grep -IE "tor" >/dev/null 2>&1; then
 
    echo -e "\n${ORANGE}[${NC}*${ORANGE}]${P} From Tor's Network${NC}:${ORANGE}" 
-   curl --socks5-hostname 127.0.0.1:9150 https://check.torproject.org/api/ip echo -e "${NC}"
+   curl --socks5-hostname 127.0.0.1:9150 https://check.torproject.org/api/ip && echo -e "${NC}"
 
 else
 

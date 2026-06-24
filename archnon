@@ -475,7 +475,7 @@ if ss -tulpn | grep -iE "6969|9150|9151" >/dev/null 2>&1 || pgrep -a tor | grep 
    
    echo -e "\n${BLUE}[${ORANGE}*${BLUE}]${ORANGE} Requesting a ${P}NEWNYM${NC}..."   
 
-   echo -e "AUTHENTICATE \"\"\nSIGNAL NEWNYM\nQUIT" | nc 127.0.0.1 9151 >/dev/null 2>&1 && echo -e "${ORANGE}[${BLUE}*${YELLOW}]${BLUE} You have a new id from Tor${NC}" || echo -e "${RED}[${NC}-${RED}]${NC} Dont be fast, wait ${RED}5 secs${NC} before typing ${ORANGE}'changeid'${NC}"
+   echo -e "AUTHENTICATE \"\"\nSIGNAL NEWNYM\nQUIT" | nc 127.0.0.1 9151 >/dev/null 2>&1 && echo -e "\n${ORANGE}[${BLUE}+${ORANGE}]${BLUE} You have a new id from Tor${NC}" || echo -e "\n${RED}[${NC}-${RED}]${NC} Dont be fast, wait at least ${RED}5 secs${NC} before typing ${ORANGE}'changeid'${NC}"
    
    myip
 
